@@ -1,0 +1,21 @@
+import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+
+import React from 'react'
+
+const SocialMedia = () => {
+  return (
+    <div className="app__social">
+      <div>
+        <FaInstagram />
+      </div>
+      <div>
+        <FaLinkedin />
+      </div>
+      <div>
+        <FaFacebook />
+      </div>
+    </div>
+  )
+}
+
+export default SocialMedia

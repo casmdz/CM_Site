@@ -1,0 +1,30 @@
+{
+  "short_name": "CM Website",
+  "name": "C Mendez Website Portfolio",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "book.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo_book2.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "logo-book512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "description": "Portfolio / Resume information for CMendez",
+  "display": "standalone",
+  "theme_color": "#404b97",
+  "background_color": "#ffffff"
+}

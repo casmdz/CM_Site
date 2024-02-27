@@ -1,0 +1,164 @@
+import React, { useEffect, useRef } from 'react'
+import './beforeheader.scss';
+import { easeInOut, motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import images from '../../constants/images';
+import { MdOutlineWavingHand } from "react-icons/md";
+// step 2
+import { AppWrap } from '../../components';
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+// A DOMRect describes the size and position of a rectangle.
+// https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
+
+//card code credit to www.hover.dev/components/cards#hover-tilt-card 
+
+// header copy before implementing tilt on regular components
+
+
+const TiltCard = () => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  //dont return a setState, but call the set sunction on that object
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+  const rotateX = useTransform(
+    mouseYSpring,
+    [-0.5, 0.5],
+    ["13deg", "-13deg"]
+  );
+  const rotateY = useTransform(
+    mouseXSpring,
+    [-0.5, 0.5],
+    ["-13deg", "13deg"]
+  );
+
+  // const handleMouseMove = (e) => {
+  //   // if (!ref.current) return;
+  //   // console.log(e.target.getBoundingClientRect());
+  //   const rectangle = e.target.getBoundingClientRect();
+  //   const width = rectangle.width;
+  //   const height = rectangle.height;
+  //   // console.log(e.clientX, e.clientY);
+  //   const mouseX = e.clientX - rectangle.left;
+  //   const mouseY = e.clientY - rectangle.top;
+  //   // console.log({ mouseX, mouseY }); 
+  //   // top left 00, bottom right full
+  //   // turn into a percentage, i am 100% of the way on _-axis
+  //   // for a rotation it makes it easier to tell - 0.5
+  //   const xPct = mouseX / width - 0.5;
+  //   const yPct = mouseY / height - 0.5;
+  //   //can store in state, but can use MOTION VALUE HOOK
+  //   // console.log(xPct, yPct);
+  //   x.set(xPct);
+  //   y.set(yPct);
+  //   console.log('x is doing', xPct);
+  //   console.log('y is doing', yPct);
+  // };
+
+  useEffect(() => {
+    let animationFrameId;
+    const handleMouseMove = (e) => {
+      cancelAnimationFrame(animationFrameId);
+
+      animationFrameId = requestAnimationFrame(() => {
+        const rectangle = e.target.getBoundingClientRect();
+        const width = rectangle.width;
+        const height = rectangle.height;
+        const mouseX = e.clientX - rectangle.left;
+        const mouseY = e.clientY - rectangle.top;
+        const xPct = mouseX / width - 0.5;
+        const yPct = mouseY / height - 0.5;
+        x.set(xPct);
+        y.set(yPct);
+      });
+    };
+    const handleMouseLeave = () => {
+      y.set(0);
+      x.set(0);
+      // console.log('reset');
+    };
+    const card = document.querySelector('.head__outside-tilt-card');
+    card.addEventListener('mousemove', handleMouseMove);
+    card.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      card.removeEventListener('mousemove', handleMouseMove);
+      card.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, [x, y]);
+
+  // const handleMouseLeave = () => {
+  //   y.set(0);
+  //   x.set(0);
+  // };
+  // , transform: "rotateY(25deg)"      // ref={ref}
+  // onMouseMove={handleMouseMove}
+  // onMouseLeave={handleMouseLeave}
+  return (
+    <motion.div
+      style={{
+        rotateX, rotateY,
+        transformStyle: "preserve-3d",
+      }}
+      className='head__outside-tilt-card'
+    >
+      <div
+        style={{
+          transform: "translateZ(75px)",
+          transformStyle: "preserve-3d",
+        }}
+        className='head__2-tilt-card'
+      >
+        <p style={{ transform: "translateZ(50px)", }} className='inner_text-tilt-hover'>HOVER ME</p>
+      </div>
+    </motion.div>
+
+  );
+};
+
+
+const BeforeHeader = () => {
+  return (
+    <>
+
+      <div id='nope' className='app__header '>
+        {/*  removed app__flex */}
+        <motion.div
+          className='app__header-img'
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 0.9 }}
+        >
+          <motion.img
+            className='app__profile-img'
+            src={images.cmendez_portrait}
+            alt='claudia mendez portrait'
+            whileInView={{ scale: [0, 1] }}
+            transition={{ duration: 1, ease: easeInOut }}
+          />
+        </motion.div>
+
+        <motion.div
+          className='app__header-info'
+          whileInView={{ x: [100, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.9 }}
+        >
+          <div className='head-description '> {/* removed app__Flex */}
+            <span><MdOutlineWavingHand /></span>
+            <div>
+              <h1 className='head-text'>Hello, I'm <br /> Claudia Mendez</h1>
+              <p className='subhead-text'>and I'm a Early Childhood Educator.</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className='example-container-tilt'>
+        <TiltCard />
+      </div>
+
+    </>
+  )
+}
+// step 2
+// export default Header
+export default AppWrap(BeforeHeader, 'nope')
+// passes it as a Component 

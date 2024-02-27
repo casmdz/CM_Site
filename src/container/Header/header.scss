@@ -1,0 +1,221 @@
+#home {
+    position: relative;
+    // background: url("../../assets/bgIMG_room.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //disable default padding 
+    .app__wrapper {
+        padding: 0;
+        // min-height: 100%; //no, this weirdly cuts off in mobile
+    }
+}
+
+.app__header {
+    // height: 75%;
+    // border: 3px dotted orange;
+    justify-content: center;
+    // width: 90%; //kind of not really matters
+    display: flex;
+    flex-direction: row;
+    align-items: center; //this helps centering the description
+    // padding: 6rem 4rem 1rem 0rem;
+    padding: 3rem 4rem 1rem 0rem;
+
+    @media screen 
+    and (min-device-width: 325px) 
+    and (max-width: 1120px) //og 
+    and (orientation: landscape) 
+    {
+        height: 80svh;
+        width: 98svw;
+        padding: 3rem 1rem 0rem 0rem;
+        // padding: 3rem 1rem;
+        flex-direction: row !important;
+        .app__header-img {
+            flex: 0 1 32%;
+        };
+        .head-description {
+            // border: 3px solid blue;
+            height: 90% !important;
+            padding: 0rem 2rem;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    };
+
+    // @media screen and (max-width: 580px) {};
+    @media only screen 
+    and (min-device-width: 325px) 
+    and (max-device-width: 950px) 
+    and (orientation: landscape)
+    {
+        .head-description {
+            h1 {font-size: 2rem};
+            p {font-size: 1.3rem;};
+            padding: 0rem;
+            // border: 1px dotted red;
+        }
+    };
+    // specifically strange ipad style. this excludes a chromebook
+    @media only screen and (min-device-width: 950px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+        // border: 2px dotted red;
+        padding: 1rem 1rem 0rem 0rem;
+        .app__header-img {flex: 0 1 32%;};
+    }
+
+
+    // phone landscape 
+    // @media only screen 
+    // and (min-device-width: 320px) 
+    // and (max-width: 900px) 
+    // and (orientation: landscape) {
+    //     height: 80svh;
+    //     flex-direction: row;
+    // }
+    // @media screen and (max-width: 480px) {
+    //     padding: 6rem 1rem 2rem; //og todo 
+    // }
+
+    //todo check added portrait
+    @media screen 
+    and (max-width: 950px) 
+    and (orientation: portrait) 
+    {
+        flex-direction: column-reverse;
+        padding: 6rem 2rem;
+    };
+    @media screen 
+    and (max-device-width: 950px) 
+    and (orientation: portrait) 
+    {
+        padding: 2.5rem 0.9rem;
+        // border: 2px dotted red;
+    };
+
+    @media screen and (min-device-width: 320px) and (max-device-width: 580px) {
+        height: 80svh;
+        .head-description {
+            height: 90% !important;
+            h1 {font-size: 1.5rem;}
+            p {font-size: 1rem;}
+        };
+        .app__header-img {margin-top: 0rem;};
+    };
+};
+
+// hello Im...
+.app__header-info {
+    flex: 1 1 48%; //added
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    // justify-content: flex-start;
+    // align-items: center;
+    // border: 2px solid purple;
+    @media screen and (max-width: 900px) {
+        justify-content: center;
+        align-items: center;
+        .head-description {
+            height: 50%;
+            // border: 1px dashed yellow;
+        }
+    }
+    .tilt-card {
+        background-color: transparent !important;
+    }
+};
+
+.head-description {
+    // flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; //s2
+    // flex-direction: row; //og
+    border: var(--coolGrey);
+    padding: 3rem 3rem 4rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
+    h1 {font-size: 4rem; margin-bottom: 0.8rem !important;}
+    p {font-size: 2rem;}
+    h1, p {text-align: left;}
+    span {
+        font-size: 3rem;
+        padding: 0 2rem 0 0;
+        @media screen and (min-width: 2000px) {
+            font-size: 5rem;
+            align-items: center;
+        };
+        @media screen and (min-device-width: 325px) and (max-device-width: 950px){
+            font-size: 1.8rem;
+            padding: 0 0.5rem;
+        };
+    };
+
+    //tiny iphone 5/se or smaller
+    @media screen and (max-width: 580px) {
+        padding: 2rem 1rem;
+        flex-direction: row-reverse;
+        // border: 2px ridge blue;
+        .app__header-img {
+            margin: 0;
+        };
+    };
+}
+
+
+.app__header-img {
+    flex: 0 1 52%; //s2
+    // height: 100%;
+    // width: 60%;
+    align-items: center; //?
+    display: flex;
+    justify-content: center;
+    // border: 8px solid green;
+    -webkit-mask-image: url("../../assets/shape.svg");
+    mask-image: url("../../assets/shape.svg");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    mask-origin: content-box; //this one might be necessary !!!!
+    // position: relative;
+    img {
+        // object-fit: contain; //og
+        object-fit: cover;
+        z-index: 1;
+        transform: scale(1.3,1.3) translate(36%, 0%);
+        max-width: 100%;//added
+        border: 5px solid var(--mediumIndigoColor);
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+    }
+    .tilt-card {
+        background-color: transparent !important;
+        mask-origin: content-box;
+        // box-shadow: 10ox 20px 20px rgba(0, 0, 0, 0.3);
+    }
+    @media screen and (max-width: 580px) {
+        margin-top: 1.5rem;
+    }
+}
+
+.app__profile-img {
+    -webkit-mask-image: url("../../assets/shape.svg");
+    mask-image: url("../../assets/shape.svg");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    // mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    width: 52%;
+    max-width: 85%;
+    // @media screen and (max-width: 480px) {
+    //     width: 85%;
+    // }
+}

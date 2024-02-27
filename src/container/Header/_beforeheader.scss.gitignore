@@ -1,0 +1,208 @@
+#sdgfjhghome {
+    position: relative;
+    // background: url("../../assets/bgIMG_room.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //disable default padding 
+    .app__wrapper {
+        padding: 0;
+        // height: min-content;
+        // width:fit-content;
+    }
+}
+.example-container-tilt {
+    display: grid;
+    border: 2px dashed red;
+    height: 80vh;
+    width: 100%;
+    place-content: center;
+    padding: 5rem 2rem;
+    color: black;
+}
+
+.head__outside-tilt-card {
+    --tw-gradient-from: #a5b4fc var(--tw-gradient-from-position);
+
+    --tw-gradient-to: #a78bfa var(--tw-gradient-to-position);
+
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+
+    position: relative;
+    height: 24rem;
+    width: 18rem; 
+    border-radius: 0.75rem;
+    // background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+    background-color: #a5b4fc;
+}
+
+.head__2-tilt-card {
+    position: absolute;
+    inset: 1rem; /* 16px */
+    display: grid;
+    place-content: center;
+    border-radius: 0.75rem;
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.inner_text-tilt-hover {
+    margin: auto;
+    text-align: center;
+    font-size: xx-large;
+}
+
+// .child {
+//     flex: [flex-grow] [flex-shrink] [flex-basis];
+//     flex: [max] [min] [ideal size];
+//     flex: 0 1 auto; /* Default flex value */
+//   }
+
+.app__header {
+    width: 90%; //kind of not really matters
+    // height: 75%;
+    border: 3px dotted orange;
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    align-items: center; //this helps centering the description
+    padding: 6rem 4rem 1rem 0rem;
+
+    // @media screen and (min-width: 2000px) {
+    //     padding-top: 8rem;
+    // }
+
+    @media screen and (min-width: 860px) and (max-width: 1200px) and (orientation: landscape) {
+        height: 80svh;
+        width: 98svw;
+        flex-direction: row !important;
+        .app__header-img {
+            flex: 0 1 32%;
+        }
+        .head-description {
+            border: 3px solid blue;
+            height: 80% !important;
+            padding: 0rem 2rem;
+            h1 {font-size: 3rem;}
+            span, p {
+                font-size:xx-large;
+                // width: fit-content;
+            }
+        }
+
+    }
+//todo check added portrait
+    @media screen and (max-width: 900px), screen and (orientation: portrait) {
+        flex-direction: column-reverse;
+        padding: 6rem 2rem;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 6rem 1rem 2rem;
+    }
+}
+
+// hello Im...
+.app__header-info {
+    flex: 1 1 48%; //take that amt of screen //added
+//  img box flex: 0 1 52%;
+    display: flex;
+    // justify-content: flex-start;
+    // align-items: stretch;
+    align-items: center;
+    height: 100%;
+    border: 2px solid purple;
+
+    @media screen and (max-width: 900px) {
+        justify-content: center;
+        align-items: center;
+        .head-description {
+            height: 50%;
+        }
+    }
+}
+
+
+
+.head-description {
+    // flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; //s2
+    // flex-direction: row; //og
+    border: var(--white-color);
+    padding: 3rem 3rem 4rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+    h1 {font-size: 4rem; margin-bottom: 0.8rem !important;}
+    p {font-size: 2rem;}
+    @media screen and (max-width: 580px) {
+        h1{font-size:2.2rem}
+        p {font-size: 1.6rem;}
+    }
+
+    h1, p {text-align: left;}
+
+    span {
+        font-size: 3rem;
+        padding: 0 2rem 0 0;
+        @media screen and (min-width: 2000px) {
+            font-size: 5rem;
+            align-items: center;
+        }
+    }
+
+    @media screen and (max-width: 580px) {
+        padding: 2rem 1rem;
+        .app__header-img {
+            margin: 0;
+        }
+    }
+}
+
+// .subhead-text {
+//     font-size: 1.5rem;
+//     @media screen and (max-width: 480px) {
+//         font-size: 0.9rem;
+//     }
+// }
+
+.app__header-img {
+    flex: 0 1 52%; //s2
+    // height: 100%;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    border: 2px solid green;
+    // width: 60%;
+    img {
+        object-fit: contain;
+        z-index: 1;
+        border: 2px dashed yellow;
+    }
+    // @media screen and (max-width: 900px) {
+    //     margin: 2rem 0;
+    // }
+}
+
+.app__profile-img {
+    -webkit-mask-image: url("../../assets/shape.svg");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    width: 52%;
+    // width: 67%;
+    max-width: 85%;
+    @media screen and (max-width: 480px) {
+        width: 75%;
+    }
+}
+
+// https://www.digitalocean.com/community/tutorials/css-masking-with-mask-image
+
+// https://css-tricks.com/almanac/properties/t/transform-style/
+
+// .app__profile-img {
+//     border-radius: 49% 51% 10% 10% / 49% 52% 10% 10% ;
+// }

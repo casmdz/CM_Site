@@ -1,0 +1,66 @@
+.edu_head-text {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app__education-container {
+    // border: rgb(228, 104, 104) 0.1rem solid;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.app__education-item{
+    display: flex;
+    padding: 1rem;
+    // background-color: var(--blueAccColor);
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    box-shadow: 0px 2px 10px #7f83d6CC; //# CC indigo
+    text-align: center;
+    // flex-wrap: wrap;
+    flex-direction: row;
+    width: calc((90% / 3) - 2rem);
+    align-items: center;
+    justify-content: center;
+
+    span {
+        display: flex;
+        font-size: 2.2em;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 900px) {
+        width: 72%;
+        span {
+            margin-right: 10px;
+        }
+    }
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes storm {
+    0% { transform: translate3d(0, 0, 0),translateZ(0); }
+    25% { transform: translate3d(6px, 0, 0) }
+    50% { transform: translate3d(-3px, 0, 0) }
+    75% { transform: translate3d(2px, 0, 0) }
+    100% { transform: translate3d(0, 0, 0) }
+}

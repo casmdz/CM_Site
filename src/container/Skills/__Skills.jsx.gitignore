@@ -1,0 +1,65 @@
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import './skills.scss';
+import { AppWrap } from '../../components'
+import { urlFor, client } from '../../client'
+
+const Skills = () => {
+  const [skills, setSkills] = useState([]);
+  const [technologies, setTechnologies] = useState([]);
+
+  useEffect(() => {
+    const skillsQuery = '*[_type == "skills"]';
+    const techQuery = '*[_type == "technologies"]';
+    
+    client.fetch(skillsQuery).then((data) => {
+      setSkills(data);
+    });
+
+    client.fetch(techQuery).then((data) => {
+      setTechnologies(data);
+    });
+
+  }, []);
+
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0, x: "-25vw" }}
+        whileInView={{ opacity: 1, x: 0}}
+        transition={{ duration: 1 }}
+        right={{ opacity: 0, x:  "25vw" }}
+        >
+        <h1 className='head-text'>Skills & Technologies</h1>
+      </motion.div>
+
+      <div className='app__skills-container'>
+        <motion.div className='app__skills-list'>
+
+          {skills.map((skill) => (
+            <motion.button
+              // whileInView={{ opacity: [0, 1]}}
+              whileHover={{ 
+                scale: 1.4,
+                boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.8)",
+                backgroundColor: "rgba(44, 200, 179, 0)",
+                // animation: "tilt-shaking 0.25s infinite",
+                // animation: "rotatee 0.7s infinite"
+              }}
+              // transition={{ duration: 0.5 }}
+              className='app__skills-item app__flex'
+              key={skill.name}
+            >
+              <div>
+                <p className='rawr'>{skill.skill}</p>
+              </div>
+            </motion.button>
+          ))}
+        </motion.div>
+      </div>
+
+    </>
+  )
+}
+
+export default AppWrap(Skills, "skills")

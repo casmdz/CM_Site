@@ -1,0 +1,73 @@
+.app__about {
+    // flex: 1;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+    padding: 2rem 2rem; //text padding
+    @media screen and (max-width: 950px) {
+        padding: 1rem 0.5rem;
+    }
+}
+
+.abt_head-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.app__abt-desc {
+    // flex: 1; //take that amt of screen
+    // flex-direction: column; // text inside
+    padding: 2rem 3rem;
+    flex: 2;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-right: 2em;
+    @media screen and (max-width: 950px) {
+        padding: 1rem;
+        margin-right: 0;
+    }
+}
+
+.app__about-profile {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2em;
+    @media screen and (max-width: 950px) {
+        margin-left: 0.3rem;
+        img { width: 86%;}
+    }
+}
+
+.app__about-img {
+    width: 80%;
+    max-width: 100%;
+    border-radius: 50px;
+    // margin-top: 2rem; //can remove? 
+    @media screen and (max-width: 480px) { //480
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .app__about-container {
+        flex-direction: column; 
+    }
+    .app__abt-desc,
+    .app__about-profile {
+        margin: auto;
+        margin-top: 1rem;
+    }
+}

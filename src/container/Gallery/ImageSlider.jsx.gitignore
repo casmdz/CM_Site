@@ -1,0 +1,35 @@
+import React, { useEffect, useState } from 'react';
+import './gallery.scss';
+import { client, urlFor } from '../../client';
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
+const ImageSlider = () => {
+    // const [imgIndex, setImgIndex] = useState([]);
+    const [galleryImg, setGalleryImg] = useState([]);
+    useEffect(() => {
+        const imgQuery = '[_type  == "gallery"]';
+        client.fetch(imgQuery).then((data) => {
+            console.log("Hey!!!", data);
+            setGalleryImg(data);
+        }).catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    }, []);
+    return (
+        <div>
+            <button className='img-slider-btn'><IoIosArrowBack /></button>
+            <button className='img-slider-btn'><IoIosArrowForward  /></button>
+        </div>
+        
+    )
+}
+export default ImageSlider
+// title, description, altText, imgUrl, tags
+// type ImageSliderProps = {
+//     title: string,
+//     name: array[],
+//     // name: string[],
+//     altText: string,
+//     imgUrl: image,
+//     tags: string[],
+// }
