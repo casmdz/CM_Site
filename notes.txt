@@ -1,0 +1,6 @@
+lets treat white__bg as the bg container 
+similar to the codepen we are following
+
+work experience:
+sort by dates 
+python code 

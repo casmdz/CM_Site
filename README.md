@@ -29,6 +29,8 @@ I've also shown use of functional components, SCSS and Flex, and animations with
 
 - [Tilt Card](www.hover.dev/components/cards#hover-tilt-card) Framer motion animation. Animation is optimized for browser performance. Element has drag animation for mobile use.
 
+- [React vertical timeline](https://stephane-monnot.github.io/react-vertical-timeline/#/) used in work experience section.
+
 - Gallery uses [React Slick](https://react-slick.neostack.com/) for a responsive carousel component. Took a lot of fiddling around to see if it looked good on smaller displays.
 
 - CSS Media Queries information: [[Link 1]](https://weekendprojects.dev/posts/which-responsive-media-query-breakpoints-should-you-use/) [[Link 2]](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)

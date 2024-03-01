@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"); */
-
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Englebert&family=Grandstander:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap');
@@ -8,39 +6,21 @@
 
 :root {
   --font-base: "Nunito Sans", "Grandstander", "Englebert", Seravek, 'Gill Sans Nova', source-sans-pro, sans-serif;
-  /* todo make headers be Grandstander */
 
   --mutedDarkGrey: #585455;
   --mutedDarkPurpleColor: #322f56;
 
   --offBlackColor: #180b01;
   --lightSandColor: #d8c8be;
-  --lightGreyBlueColor: #c0d1e1;  /* main */
-  --coolGrey: #cacccb;
-  /* --thisGrey: #dfe5f4; */
-
-  --greenAccColor: #43b78b;
-  --turquoiseAccColor: #16aba6;
-  --mediumBlueColor: #007278;
+  --lightGreyBlueColor: #c0d1e1;
+  --coolGrey: rgb(202, 204, 203);
 
   --blueAccColor: #36bdc2;
-
   --mediumIndigoColor: #404b97;
   --indigoColor: #7f83d6;
   --lightIndigoColor: #b3b1ce;
   
   --salmonAccColor: #fd7f81;
-
-  /* --myLinearAccColor: */
-
-  --colorAlt1: linear-gradient(270deg, #F46737 0%, #945DD6 100%);
-  --colorAlt2: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
-
-  /* background-image: url(assets/grain.png); */
-  /* background-image: url(/src/assets/grain.png); */
-  /* height: 100%; */
-  /* background-position: 0 0; */
-  /* width: 100%; */
 }
 
 * {
@@ -48,8 +28,5 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  /* background-image: url(/src/assets/grain.png); */
-  /* height: 100%; */
-  /* background-position: 0 0; */
-  /* width: 100%; */
+  /* PRESERVE 3D does affects my nav bar! dont use it*/
 }

@@ -1,26 +1,197 @@
-// @import "/src/constants/images.js";
+
 .app {
-  // background-color: var(--primary-color);
-  // background: var(--secondaryColor);
   background: var(--lightGreyBlueColor);
   font-family: var(--font-base);
-  background-image: url(assets/grain.png);
-  // background-position: 0 0;
-  // width: 100%;
-  // height: 100%;
 }
-
 .app__whitebg {
   background-color: var(--lightIndigoColor);
 }
 
-.app__grainbg {
-  background-image: url(assets/grain.png);
+.blank-section{
+  width: 100%;
+  min-height: 18svh;
+  background-color: var(--mutedDarkPurpleColor);
+  background-image: url('../src/assets/grain.png');
+}
+.blank-section:nth-child(3n - 1) {
+  background-color: var(--indigoColor);
+}
+.blank-section:nth-last-child(-n+2){
+  min-height: 21.5svh;
+  background-image: linear-gradient(to right, 
+  rgba(128, 132, 214, 0.6), 
+  hsla(245, 29%, 26%, 0.6)
+  ), url('../src/assets/grain.png');
+  background-size: cover;
 }
 
-.app__salmonbg {
-  background-color: var(--salmonAccColor);
+
+.app__citybg1 {
+  background-image:
+  linear-gradient(to bottom, 
+  rgba(142,158,171,0.9) 0%, 
+  rgba(178,202,211,0.5) 15%, 
+  rgba(196,225,231,0.3) 25%, 
+  rgba(238,242,243,0.1) 50%, 
+  rgba(196,225,231,0.2) 75%, 
+  rgba(27, 62, 67, 0.2) 85%, 
+  rgba(27, 62, 67, 0.5) 100%
+  ),
+  linear-gradient(150deg, rgba(30, 39, 41, 0.2), rgba(30, 40, 47, 0.2)),
+  url('../src/assets/bg-chicago-tower-sawyer-bengtson.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 40%;
+  z-index: -3;
+  // isolation: isolate;
+  // background-blend-mode: multiply;
+  // background-position: center; //x y
 }
+
+
+.app__citybg2 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(196, 225, 231, 0.06) 0%,
+    rgba(196, 225, 231, 0.1) 10%,
+    rgba(45, 77, 81, 0.2) 35%,
+    rgba(45, 77, 81, 0.2) 50%,
+    rgba(45, 77, 81, 0.5) 85%,
+    rgba(27, 62, 67, 0.8) 105%,
+  ), url('../src/assets/bg-chicago-reflection.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-position: center;
+  background-attachment: fixed;
+  // isolation: isolate;
+}
+.app__citybg2::before{
+  position: absolute;
+  display: block;
+  top: 0; left: 0; right: 0; bottom: 0;
+  transform: translateZ(-1px) scale(2.1);
+  z-index: -2;
+}
+
+.app__citybg2-2 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(196, 225, 231, 0) 0%,
+    rgba(196, 225, 231, 0.01) 10%,
+    rgba(27, 62, 67, 0.05) 25%,
+    rgba(196, 225, 231, 0.02) 50%,
+    rgba(45, 77, 81, 0.3) 85%,
+    rgba(27, 62, 67, 0.6) 100%,
+  ), url('../src/assets/bg-chicago-reflection.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+
+.app__schoolItemsBg {
+  background-image: -webkit-radial-gradient(
+    circle, 
+    rgba(216,219,212,0) 0%, 
+    rgba(210,181,150,0) 70%, 
+    rgba(220,75,22,0) 100%,
+    ), 
+    linear-gradient(to bottom, 
+    rgba(211,185,157,0.3) 0%, 
+    rgba(219,218,212,0.2) 15%, 
+    rgba(210,181,150,0.3) 40%, 
+    rgba(210,181,150,0.45) 60%, 
+    rgba(62, 21, 6, 0.5) 100%,
+    ),
+  url('../src/assets/bg-school-items.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.app__schoolItemsBg::before{
+  position: absolute;
+  display: block;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -2;
+}
+
+
+.app__bgColoredpencils{
+  background-image: url('../src/assets/bg-colored-pencils-markus-spiske.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+// background-image: linear-gradient(
+//   to bottom,
+//   hsla(0, 15%, 5%, 0) 0%,
+//   hsla(5, 15%, 5%, 0.05) 25%,
+//   hsla(0, 15%, 5%, 0.1) 39%,
+//   hsla(0, 15%, 5%, 0.255) 50%,
+//   hsla(0, 15%, 5%, 0.427) 65%,
+//   hsla(0, 15%, 5%, 0.527) 70%,
+//   hsla(0, 15%, 5%, 0.75) 80%,
+//   hsla(0, 15%, 5%, 0.827) 95%,
+//   hsl(5, 15%, 5%) 100%
+// ), url('../src/assets/bg-monumento-independencia.jpg');
+
+
+
+.app__bgAngel {
+  background-image: linear-gradient( 68.2deg,
+  rgba(40,91,212,0.5) -3%,
+  rgba(110, 163, 203, 0.4) 10%,
+  rgba(213, 169, 204, 0.25) 30%,
+  rgba(171, 80, 150, 0.25) 50%,
+  rgba(213, 169, 204, 0.25) 70%,
+  rgba(239, 209, 161, 0.25) 90%,
+  rgba(231, 149, 12, 0.25) 103%,
+  ), url('../src/assets/bg-monumento-independencia.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.app__bgPapelitos {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(196, 225, 231, 0.06) 0%,
+    rgba(196, 225, 231, 0.1) 10%,
+    rgba(45, 77, 81, 0.2) 35%,
+    rgba(45, 77, 81, 0.2) 50%,
+    rgba(45, 77, 81, 0.5) 85%,
+    rgba(27, 62, 67, 0.8) 105%,
+  ), url('../src/assets/bg-filip-gielda.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app__bgRainbowCraft{
+  background-image: linear-gradient( 109.6deg,  
+  rgba(255,179,189, 0.4) 2%, 
+  rgba(254,248,154, 0.3) 50.6%, 
+  rgba(113, 213, 153, 0.3) 103% 
+  ),
+  url('../src/assets/bg-rainbow-craft-taylor-heery.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 75%;
+}
+
+.app__bgRainbow{
+  background-image: linear-gradient( 69.7deg,  rgba(244,37,243,1) 1.4%, rgba(244,87,1,1) 36.2%, rgba(255,204,37,1) 72.2%, rgba(20,196,6,1) 113% );
+}
+
 
 
 .app__flex {
@@ -68,15 +239,26 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
 }
 
 .head-text {
-  font-size: 3.25rem;
-  font-weight: 800;
+  font-size: 3.3rem;
+  // font-weight: 800;
   text-align: center;
   color: var(--mediumIndigoColor);
   text-transform: capitalize;
   font-family: "Englebert" !important;
-  text-shadow: 2px 2px 2px var(--mutedDarkPurpleColor);
+  text-shadow: 
+  1px 0px 2px var(--indigoColor),
+  1px 2px 2px var(--indigoColor),
+  1px 3px 2px var(--indigoColor),
+  1px 4px 2px var(--indigoColor),
+  2px 5px 2px var(--lightIndigoColor),
+  2px 6px 2px var(--lightIndigoColor),
+  3px 7px 2px var(--lightIndigoColor),
+  3px 8px 2px var(--lightIndigoColor),
+  4px 12px 6px rgba(16, 16, 16, 0.6),
+  ;
+  // background-color: rgb(189, 145, 156);
+  // padding: 1rem;
   letter-spacing: 0.02em;
-
   span {
     color: var(--salmonAccColor); 
   }
@@ -84,7 +266,6 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
   @media screen and (min-width: 2100px) {
     font-size: 5rem;
   }
-
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
@@ -93,11 +274,10 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
 .p-text {
   font-size: 1.2rem;
   // text-align: left;
-  color: var(--mutedDarkPurpleColor);
+  color: var(--mediumIndigoColor);
   line-height: 1.5;
-
-  @media screen and (min-width: 2100px) {
-    font-size: 2rem;
+  @media screen and (min-width: 1660px) {
+    font-size: 1.5rem;
   }
 }
 
@@ -107,7 +287,6 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  // border: 2px solid red;
 }
 // nav item
 .dot-wrapper {
@@ -115,7 +294,6 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
   align-items: center;
   flex-direction: row-reverse;
   // margin-bottom: 0.5rem;
-  // border: 1px solid blue;
 }
 
 .app__navigation-dot:hover ~ .nav-label {
@@ -158,4 +336,5 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
   border-radius: 2rem;
   background: linear-gradient(to right, var(--blueAccColor), var(--mediumIndigoColor));
   text-align: center;
+  margin-top: 1em;
 }

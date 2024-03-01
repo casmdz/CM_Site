@@ -9,12 +9,19 @@ const App = () => {
     <div className='app'>
       <Navbar />
       <Header />
+      <div class="blank-section"></div>
       <About />
+      <div class="blank-section"></div>
       <Work />
+      <div class="blank-section"></div>
       <Education />
+      <div class="blank-section"></div>
       <Skills />
+      <div class="blank-section"></div>
       <Interests />
+      <div class="blank-section"></div>
       <Gallery />
+      <div class="blank-section"></div>
       <Contact />
     </div>
   )

@@ -1,14 +1,17 @@
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 #gallery.app__flex{
   display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app__gallery{
-  border: 2px solid seagreen;
+  // border: 2px solid seagreen;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .app__gallery-cont {
   width: 85%;
@@ -20,19 +23,29 @@
   // flex-direction: column;
   // justify-content: center;
   // align-items: center;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 .slider-container {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  box-shadow: 0px 2px 10px #7f83d6CC; //CC = opacity indigo
+  // box-shadow: 0px 2px 10px #7f83d6CC; //CC = opacity indigo
   border-radius: 2px;
 }
 
+
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: var(--blueAccColor) !important;
+}
+
+
 .slick-dots li button::before {
-  font-size: 0.8rem !important;
-  line-height: 30px !important;
+  opacity: 0.8 !important;
+  font-size: 1.2rem !important;
+  line-height: 40px !important;
+  color: var(--lightIndigoColor) !important;
 }
 
 .slick-prev, .slick-next{
@@ -85,9 +98,6 @@
 }
 
 .show-more-btn {
-  // background: -webkit-linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  // background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-
   background: var(--lightIndigoColor);
 
   display: none;

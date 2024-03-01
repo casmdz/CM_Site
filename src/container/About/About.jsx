@@ -28,7 +28,8 @@ const About = () => {
         <SectionDivider />
       </motion.div>
 
-      <div id='about' className='app__about'>
+      <div>
+      {/* <div id='about' className='app__about'> */}
         {abouts.map((about, index) => (
           <div className='app__about-container' key={index}>
             <div className='app__abt-desc'>
@@ -63,4 +64,4 @@ const About = () => {
 export default AppWrap(
   MotionWrap(About, 'app__about'),
   'about',
-  "app__whitebg");
+  "app__citybg2");

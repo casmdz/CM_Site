@@ -1,9 +1,4 @@
 #home {
-    position: relative;
-    // background: url("../../assets/bgIMG_room.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     //disable default padding 
     .app__wrapper {
         padding: 0;
@@ -21,6 +16,7 @@
     align-items: center; //this helps centering the description
     // padding: 6rem 4rem 1rem 0rem;
     padding: 3rem 4rem 1rem 0rem;
+    // background-color: var(--lightIndigoColor);
 
     @media screen 
     and (min-device-width: 325px) 
@@ -44,7 +40,6 @@
             }
         }
     };
-
     // @media screen and (max-width: 580px) {};
     @media only screen 
     and (min-device-width: 325px) 
@@ -64,8 +59,6 @@
         padding: 1rem 1rem 0rem 0rem;
         .app__header-img {flex: 0 1 32%;};
     }
-
-
     // phone landscape 
     // @media only screen 
     // and (min-device-width: 320px) 
@@ -75,9 +68,8 @@
     //     flex-direction: row;
     // }
     // @media screen and (max-width: 480px) {
-    //     padding: 6rem 1rem 2rem; //og todo 
+    //     padding: 6rem 1rem 2rem; //og 
     // }
-
     //todo check added portrait
     @media screen 
     and (max-width: 950px) 
@@ -136,14 +128,22 @@
     border: var(--coolGrey);
     padding: 3rem 3rem 4rem 2rem;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+    // background-color: var(--lightIndigoColor);
+    // background-color: rgba(196, 225, 231, 0.3); 
+    background-color: rgba(234, 219, 202, 0.3); 
     
     h1 {font-size: 4rem; margin-bottom: 0.8rem !important;}
-    p {font-size: 2rem;}
+    p {
+        font-size: 2rem; 
+        color: var(--mediumIndigoColor);
+        text-shadow: 1px 1px 2px var(--mediumIndigoColor);
+    }
     h1, p {text-align: left;}
     span {
         font-size: 3rem;
         padding: 0 2rem 0 0;
+        color: var(--mediumIndigoColor);
         @media screen and (min-width: 2000px) {
             font-size: 5rem;
             align-items: center;
@@ -153,7 +153,6 @@
             padding: 0 0.5rem;
         };
     };
-
     //tiny iphone 5/se or smaller
     @media screen and (max-width: 580px) {
         padding: 2rem 1rem;

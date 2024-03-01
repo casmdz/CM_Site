@@ -78,4 +78,4 @@ const Modal = ({ imgUrl, interest, closeModal, description }) => {
   );
 };
 
-export default AppWrap(MotionWrap(Interests, "app__interests"), "interests", "app__whitebg")
+export default AppWrap(MotionWrap(Interests, "app__interests"), "interests", "app__bgRainbowCraft")

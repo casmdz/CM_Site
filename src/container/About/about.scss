@@ -4,7 +4,13 @@
     // flex-wrap: wrap;
     // justify-content: center;
     // align-items: center;
+    // border: 1px solid green;
     padding: 2rem 2rem; //text padding
+    margin: 0 1rem;
+    background-color: rgba(202, 204, 203, 0.3);
+    box-shadow: 0px 2px 15px #322f56CC;
+    border-radius: 2rem;
+    isolation: isolate;
     @media screen and (max-width: 950px) {
         padding: 1rem 0.5rem;
     }
@@ -26,13 +32,18 @@
 }
 
 .app__abt-desc {
-    // flex: 1; //take that amt of screen
-    // flex-direction: column; // text inside
     padding: 2rem 3rem;
     flex: 2;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     margin-right: 2em;
+    // box-shadow: 0px 2px 20px #322f56CC;
+    // text-shadow: white 0px 0px 15px;
+    p{
+        mix-blend-mode: multiply;
+        // mix-blend-mode: color-burn; 
+        text-shadow: 0 0.4px 0 var(--mediumIndigoColor), var(--lightGreyBlueColor) 0px 0px 10px;
+        
+    }
     @media screen and (max-width: 950px) {
         padding: 1rem;
         margin-right: 0;
@@ -55,6 +66,7 @@
     width: 80%;
     max-width: 100%;
     border-radius: 50px;
+    box-shadow: 0px 2px 20px #322f56CC;
     // margin-top: 2rem; //can remove? 
     @media screen and (max-width: 480px) { //480
         margin-top: 2rem;

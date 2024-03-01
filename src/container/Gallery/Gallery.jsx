@@ -96,9 +96,9 @@ const Gallery = () => {
     setIsHovered(false);
   };
 
-  const handleToggle = () => {
-    setIsInfo(!isInfo);
-  };
+  // const handleToggle = () => {
+  //   setIsInfo(!isInfo);
+  // };
 
   return (
   <div className='app__gallery-cont'>
@@ -157,5 +157,5 @@ const Gallery = () => {
 };
 //export default AppWrap(MotionWrap(Contact, "app__contact"), "contact", "app__whitebg")
 
-export default AppWrap(MotionWrap(Gallery, "app__gallery"), "gallery", "app__whitebg")
+export default AppWrap(MotionWrap(Gallery, "app__gallery"), "gallery", "app__citybg1")
 // export default AppWrap(Gallery, "gallery")

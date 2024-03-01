@@ -11,17 +11,17 @@ const WorkCard = ({ work }) => (
     <VerticalTimelineElement 
         className='app__vte'
         contentStyle={{ 
-            background: "var(--blueAccColor)", 
-            color: 'var(--offBlackColor)', 
+            // background: "#b3b1ceee", 
+            background: "#7f83d6dd", 
+            color: 'var(--mediumIndigoColor)', 
             borderRadius: "40px",
         }}
         contentArrowStyle={{ 
-            borderRight: "7px solid var(--blueAccColor)", 
-            marginTop: "5%", 
-            // scale: "2", 
-            // translate: "14px"
+            borderRight: "7px solid var(--indigoColor)", 
+            marginTop: "5%",
         }}
         date={work.dates}
+        dateClassName={"vtedate"}
         iconStyle={{ background: urlFor(work.logo) }}
         icon={
             <div className='app__work-icon'>
@@ -33,14 +33,14 @@ const WorkCard = ({ work }) => (
         }
     >
         <div className='app__work-head'>
-            <h3>{work.title}</h3>
-            <p>{work.institution}</p>
-            <p>{work.location}</p>
+            <h3 className='p-text'>{work.title}</h3>
+            <p className='p-text'>{work.institution}</p>
+            <p className='p-text'>{work.location}</p>
         </div>
 
         <ul className='app__work-list'>
             {work.description.map((block, blockIndex) => (
-                <li key={blockIndex} className='app__work_li'
+                <li key={blockIndex} className='app__work_li p-text'
                 >
                     {block.children.map((d) => d.text)}
                 </li>
@@ -53,9 +53,25 @@ const WorkCard = ({ work }) => (
 const WorkExperience = () => {
     const [works, setWorks] = useState([]);
 
+    const extractYear = (dateString) => {
+        const regex = /(\d{4})/;
+        const match = dateString.match(regex);
+        const year = match ? parseInt(match[1]) : null;
+        // console.log(year, "trying to extract year");
+        return year;
+    };
+
     useEffect(() => {
         const query = '*[_type == "workExperience"]';
         client.fetch(query).then((data) => {
+            data.sort((a, b) => {
+                const yearA = extractYear(a.dates);
+                const yearB = extractYear(b.dates);
+                // console.log("yearA: " + a.dates);
+                // console.log("yearB: " + b.dates);
+                console.log(`yearB ${yearB} - yearA ${yearA}`)
+                return yearB - yearA;
+            });
             setWorks(data);
         });
     }, []);
@@ -66,7 +82,6 @@ const WorkExperience = () => {
         initial={{ opacity: 0, x: "-25vw" }}
         whileInView={{ opacity: 1, x: 0}}
         transition={{ duration: 1 }}
-        // right={{ opacity: 0, x:  "25vw" }} 
         className='work_head-text'
     >
         <h1 className='head-text'>Career Experience</h1>
@@ -75,7 +90,7 @@ const WorkExperience = () => {
 
     <div className='app__work-timeline'>
         <VerticalTimeline 
-        lineColor={"var(--blueAccColor)"}
+        lineColor={"var(--mediumIndigoColor)"}
         animate={true}>
             {works.map((work, index) => (
                 <WorkCard key={index} work={work} />
@@ -90,4 +105,4 @@ const WorkExperience = () => {
 export default AppWrap(
     MotionWrap(WorkExperience,'app__works'),
     'work',
-    "app__whitebg");
+    "app__bgAngel");

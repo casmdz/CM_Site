@@ -1,10 +1,21 @@
-
 .app__skills, .skills_head-text{
     // width: 80svw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.app__skills{
+    margin-top: 4rem;
+    padding: 2rem 0.4rem; //text padding
+    // margin: 0 1rem;
+    margin: 2rem 1rem;
+    .head-text{
+        background-color: rgba(202,204,203, 0.4);
+        border-radius: 2rem;
+        padding: 1rem 3rem;
+    }
 }
 
 .app__skills-container {
@@ -79,9 +90,6 @@
     * {
         flex: 1 1 20%;
     }
-    // @media screen and (max-width: 950px) {
-    //     *{flex: 1 1 30%;}
-    // };
     // iphone
     @media only screen 
     and (min-device-width: 325px) 
@@ -91,13 +99,6 @@
         margin: 0;
         gap: 0;
     };
-    // @media only screen 
-    // and (min-device-width: 325px) 
-    // and (max-device-width: 950px) 
-    // and (orientation: landscape) {
-    //     margin: 0;
-    //     gap: 0;
-    // };
 }
 
 .app__tech-item {
@@ -145,7 +146,7 @@
 .app__tech-item:before{
     content: "";
     position: absolute;
-    top: 1%;
+    top: 3%;
     left: 5%;
     width: 90%;
     height: 90%;

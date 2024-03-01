@@ -83,12 +83,6 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* <div className='contact-info__item' key={c.referencesPdf.title}>
-          <TiDocument className='info__icon' />
-          <p className='p-text'>
-            <a href={c.refUrl} target="_blank" rel="noopener noreferrer">References</a>
-          </p>
-        </div> */}
       </div>
       ))}
 
@@ -104,4 +98,4 @@ const Contact = () => {
   )
 }
 
-export default AppWrap(MotionWrap(Contact, "app__contact"), "contact", "app__whitebg")
+export default AppWrap(MotionWrap(Contact, "app__contact"), "contact", "app__schoolItemsBg")
