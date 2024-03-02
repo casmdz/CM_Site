@@ -1,10 +1,12 @@
 # Professional Resume Website
 
-In this project, I wanted to create a simple, flexible, one-page site that will be used in the real world by my client. It is my first time exploring Sanity.io in order to manage my content and update data outside the localhost, and without distrubing the front end. 
+In this project, I wanted to create a simple, flexible, one-page site that will be used in the real world by my client. It is my first time exploring Sanity.io in order to manage my content and update data outside the localhost, and without distrubing the front end styling. 
 
 I've also shown use of functional components, SCSS and Flex, and animations with Framer motion. The site also has mobile devices in mind, and recomendations for optimizations are welcome! Check out my profile on github to contact me.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/95bc3987-9993-4aba-83a1-d3221ead9a9c/deploy-status)](https://app.netlify.com/sites/claudia-mendez-portfolio/deploys)
+Check out the deployed production of this site on Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/95bc3987-9993-4aba-83a1-d3221ead9a9c/deploy-status)](https://claudia-mendez-portfolio.netlify.app)
 
 This project was started with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -23,7 +25,7 @@ The backend is powered by [Sanity.io](https://www.sanity.io/)
 
 ## Extra References
 
-One insight is that my main browser is a fork of Firefox, and I made fixes to the app much in advance in order to work well on Chrome. So, maybe it doesn't look as great. 
+One insight is that my main browser is a fork of Firefox, and I made fixes to the app much in advance in order to work well on Chrome. So, there's a possibility of lingering issues between browsers. 
 
 - Sanity image gallery schema, code from [Jan Hoogeveen](https://www.sanity.io/schemas/image-gallery-dea386ba).
 
@@ -40,7 +42,7 @@ One insight is that my main browser is a fork of Firefox, and I made fixes to th
 - Site icon from [icon-icons.com](https://icon-icons.com/icon/book-pen-food-education/114955)
 
 
-#### `shortcuts`
+#### `cool react vscode shortcuts`
 ```js
 rxc 
 edf 
@@ -68,11 +70,8 @@ svg https://shapes.framer.website/
 cd frontend_react
 npm start
 ```
-If you've previously installed `create-react-app` globally via `npm install -g create-react-app`, we recommend you uninstall the package using `npm uninstall -g create-react-app` or `yarn global remove create-react-app` to ensure that npx always uses the latest version.
 
-_([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
-
-Then open [http://localhost:3000/](http://localhost:3000/) to see your app.<br>
+Then open [http://localhost:3000/](http://localhost:3000/) to see the app.<br>
 
 
 
