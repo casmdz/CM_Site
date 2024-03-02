@@ -1,13 +1,14 @@
 # Professional Resume Website
 
+In this project, I wanted to create a simple, flexible, one-page site that will be used in the real world by my client. It is my first time exploring Sanity.io in order to manage my content and update data outside the localhost, and without distrubing the front end. 
+
+I've also shown use of functional components, SCSS and Flex, and animations with Framer motion. The site also has mobile devices in mind, and recomendations for optimizations are welcome! Check out my profile on github to contact me.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/95bc3987-9993-4aba-83a1-d3221ead9a9c/deploy-status)](https://app.netlify.com/sites/claudia-mendez-portfolio/deploys)
+
 This project was started with [Create React App](https://github.com/facebook/create-react-app).
 
 The backend is powered by [Sanity.io](https://www.sanity.io/) 
-
-In this project, I wanted to create a simple, flexible, one-page site that will be used in the real world by my client. It is my first time exploring Sanity.io in order to manage my content and update data outside the localhost, and without distrubing the front end. 
-
-I've also shown use of functional components, SCSS and Flex, and animations with Framer motion. The site also has mobile devices in mind, and recomendations for optimizations are welcome! Check out my profile to contact me.
-
 
 ## Dependencies
 
@@ -22,6 +23,7 @@ I've also shown use of functional components, SCSS and Flex, and animations with
 
 ## Extra References
 
+One insight is that my main browser is a fork of Firefox, and I made fixes to the app much in advance in order to work well on Chrome. So, maybe it doesn't look as great. 
 
 - Sanity image gallery schema, code from [Jan Hoogeveen](https://www.sanity.io/schemas/image-gallery-dea386ba).
 
@@ -46,14 +48,10 @@ exd
 rface
 ```
 
-One insight is that my main browser is a fork of Firefox, and I made fixes to the app much in advance in order to work well on Chrome. So, maybe it doesn't look as great. 
-
 <!-- 
 todo
 in navbar, make the display sizes consistent when hamburger bar appears
-
 svg https://shapes.framer.website/
-
  -->
 
 
