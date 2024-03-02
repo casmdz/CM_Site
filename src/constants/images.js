@@ -5,7 +5,7 @@ import shape from '../assets/shape.svg'
 import grain from '../assets/grain.png'
 import logo_book512 from '../assets/logo_book512.png'
 
-export default {
+const images = {
     logo_cm,
     cmendez_portrait,
     circle,
@@ -13,3 +13,4 @@ export default {
     grain,
     logo_book512
 };
+export default images;

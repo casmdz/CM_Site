@@ -52,6 +52,7 @@
     height: 60px;
     width: calc((82% / 3) - 2rem);
     padding: 0rem 1rem;
+    cursor: pointer;
     @media screen and (max-width: 950px) {
         width: 72%; 
         margin: 1rem 0; 
@@ -108,7 +109,7 @@
     border-radius: 50%;
     position: relative;
     left: 3em ; //ADDED THIS TO CENTER STUFF !!!!!
-
+    cursor: help;
     // width: calc((80% / 3) - 2rem);
     div {
         display: flex;

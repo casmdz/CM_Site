@@ -19,9 +19,6 @@ const Interests = () => {
     })
   }, []);
 
-  // const renderDesc = (description) => {
-  //   return description.map((param) => (param.children.map(child => child.text)))
-  // };
 
   const openModal = (index) => {
     setImgIndex(index);
@@ -42,14 +39,18 @@ return (
     </motion.div>
     <div className="app__interests-container">
       {interests.map((i, index) => (
-        <motion.div className='interest-item' key={index}>
+        <motion.div 
+        className='interest-item' key={index}
+        whileHover={{
+          scale: 1.05,
+        }}
+        >
           <img src={urlFor(i.imgUrl)} 
             alt={`${i.interest}`} 
             onClick={() => openModal(index)}
             className='int-img'
             />
             <h3>{i.interest}</h3>
-            {/* <p className="modal-caption">{renderDesc(i.description)}</p> */}
         </motion.div>
       ))}
       </div>

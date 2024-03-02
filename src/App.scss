@@ -3,9 +3,6 @@
   background: var(--lightGreyBlueColor);
   font-family: var(--font-base);
 }
-.app__whitebg {
-  background-color: var(--lightIndigoColor);
-}
 
 .blank-section{
   width: 100%;
@@ -47,6 +44,9 @@
   // isolation: isolate;
   // background-blend-mode: multiply;
   // background-position: center; //x y
+  @media screen and (max-device-width: 950px) {
+    background-attachment: local;
+  }
 }
 
 
@@ -62,9 +62,12 @@
   ), url('../src/assets/bg-chicago-reflection.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  // background-position: center;
   background-attachment: fixed;
+  // background-position: center;
   // isolation: isolate;
+  @media screen and (max-device-width: 950px) {
+    background-attachment: local;
+  }
 }
 .app__citybg2::before{
   position: absolute;
@@ -88,6 +91,9 @@
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: fixed;
+  @media screen and (max-device-width: 950px) {
+    background-attachment: local;
+  }
 }
 
 
@@ -110,6 +116,9 @@ url('../src/assets/bg-school-items.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  @media screen and (max-device-width: 950px) {
+    background-attachment: local;
+  }
 }
 
 
@@ -125,22 +134,10 @@ url('../src/assets/bg-school-items.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  @media screen and (max-device-width: 950px) {
+    background-attachment: local;
+  }
 }
-
-
-// background-image: linear-gradient(
-//   to bottom,
-//   hsla(0, 15%, 5%, 0) 0%,
-//   hsla(5, 15%, 5%, 0.05) 25%,
-//   hsla(0, 15%, 5%, 0.1) 39%,
-//   hsla(0, 15%, 5%, 0.255) 50%,
-//   hsla(0, 15%, 5%, 0.427) 65%,
-//   hsla(0, 15%, 5%, 0.527) 70%,
-//   hsla(0, 15%, 5%, 0.75) 80%,
-//   hsla(0, 15%, 5%, 0.827) 95%,
-//   hsl(5, 15%, 5%) 100%
-// ), url('../src/assets/bg-monumento-independencia.jpg');
-
 
 
 .app__bgAngel {
@@ -157,6 +154,9 @@ url('../src/assets/bg-school-items.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  @media screen and (max-device-width: 950px) {
+    background-attachment: local;
+  }
 }
 
 .app__bgPapelitos {
@@ -172,6 +172,9 @@ url('../src/assets/bg-school-items.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-device-width: 950px) {
+    background-attachment: local;
+  }
 }
 
 .app__bgRainbowCraft{
@@ -185,6 +188,9 @@ url('../src/assets/bg-school-items.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 75%;
+  @media screen and (max-device-width: 950px) {
+    background-attachment: local;
+  }
 }
 
 .app__bgRainbow{
@@ -213,9 +219,9 @@ url('../src/assets/bg-school-items.jpg');
   @media screen and (max-width: 450px) {
     padding: 4rem 1rem 2rem;
   }
-  @media screen and (max-width: 700px) { //note todo
-    padding: 2rem 0rem 1rem;
-  }
+  // @media screen and (max-width: 700px) { //note todo
+  //   padding: 2rem 0rem 1rem;
+  // }
   // @media only screen and (min-device-width: 950px) 
   // and (max-device-width: 1466px) and (orientation: portrait) 
   // and (-webkit-min-device-pixel-ratio: 2)
@@ -225,7 +231,7 @@ url('../src/assets/bg-school-items.jpg');
 }
 
 
-a{text-decoration: none; color: var(--salmonAccColor)};
+a{text-decoration: none; color: var(--mutedDarkPurpleColor)};
 a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
 
 .copyright {
@@ -240,6 +246,7 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
 .head-text {
   font-size: 3.3rem;
   // font-weight: 800;
+  letter-spacing: 0.04em;
   text-align: center;
   color: var(--mediumIndigoColor);
   text-transform: capitalize;
@@ -257,7 +264,6 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
   ;
   // background-color: rgb(189, 145, 156);
   // padding: 1rem;
-  letter-spacing: 0.02em;
   span {
     color: var(--salmonAccColor); 
   }
@@ -275,6 +281,9 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
   // text-align: left;
   color: var(--mediumIndigoColor);
   line-height: 1.5;
+  // @media screen and (min-width: 1024){
+  //   p{font-size: 1.33rem;}
+  // }
   @media screen and (min-width: 1660px) {
     font-size: 1.5rem;
   }
@@ -300,17 +309,21 @@ a:visited { text-decoration: none; color: var(--mutedDarkPurpleColor)};
 }
 
 .nav-label { //text
-  color:var(--indigoColor);
+  color:var(--lightIndigoColor);
+  -webkit-text-stroke: 0.2px var(--mediumIndigoColor);
+  text-shadow: 0 0 3px #000000;
   opacity: 0;
   transition: opacity 0.1s;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .app__navigation-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: var(--mutedDarkGrey);
+  background-color: var(--coolGrey);
+  border: 1px solid var(--mutedDarkGrey);
   margin: 0.5rem;
   transition: background-color 0.2s ease-in-out;
   &:hover {

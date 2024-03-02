@@ -129,12 +129,14 @@
     padding: 3rem 3rem 4rem 2rem;
     border-radius: 15px;
     box-shadow: 0 0 20px #322f56CC;
-    // box-shadow: 0 0 20px rgba(244,134,146,0.8);
-    // background-color: var(--lightIndigoColor);
-    // background-color: rgba(196, 225, 231, 0.3); 
-    background-color: rgba(179, 177, 206, 0.45); 
+    background-color: rgba(179, 177, 206, 0.45);
     
-    h1 {font-size: 4rem; margin-bottom: 0.8rem !important;}
+    h1 {
+        font-size: 4rem; 
+        margin-bottom: 0.8rem !important;
+        line-height: 1.5em;
+        letter-spacing: 0.03em;
+    }
     p {
         font-size: 2rem; 
         color: var(--mediumIndigoColor);
