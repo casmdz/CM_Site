@@ -45,5 +45,5 @@ const Header = () => {
   )
 }
 // export default AppWrap(Header, 'home')
-export default AppWrap(MotionWrap(Header, 'app__header'), 'home', 'app__schoolItemsBg')
+export default AppWrap(MotionWrap(Header, 'app__header'), 'home', 'app__bgColoredpencils')
 // passes it as a Component 

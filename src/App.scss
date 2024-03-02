@@ -105,23 +105,22 @@
     rgba(210,181,150,0.45) 60%, 
     rgba(62, 21, 6, 0.5) 100%,
     ),
-  url('../src/assets/bg-school-items.jpg');
+url('../src/assets/bg-school-items.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
 
-.app__schoolItemsBg::before{
-  position: absolute;
-  display: block;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -2;
-}
 
 
 .app__bgColoredpencils{
-  background-image: url('../src/assets/bg-colored-pencils-markus-spiske.jpg');
+  background-image: linear-gradient(135deg, 
+  rgba(166,189,161,0.25)10%, 
+  rgba(253,178,173,0.25) 25%, 
+  rgba(244,134,146,0.3) 50%, 
+  rgba(200,166,150,0.3) 90%
+  ), url('../src/assets/bg-colored-pencils-markus-spiske.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

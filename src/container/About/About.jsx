@@ -64,4 +64,4 @@ const About = () => {
 export default AppWrap(
   MotionWrap(About, 'app__about'),
   'about',
-  "app__citybg2");
+  "app__schoolItemsBg");
