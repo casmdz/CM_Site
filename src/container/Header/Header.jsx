@@ -35,7 +35,7 @@ const Header = () => {
             <span><MdOutlineWavingHand /></span>
             <div>
               <h1 className='head-text'>Hello, I'm <br /> Claudia Mendez</h1>
-              <p className='subhead-text'>and I'm a Early Childhood Educator.</p>
+              <p className='subhead-text'>and I'm an Early Childhood Educator.</p>
             </div>
           </div>
         </TiltCard>
